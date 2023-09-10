@@ -21,7 +21,7 @@ const HomeProduct = [
     price: "9.99",
     image: "image/product-6.png",
     category: "",
-    type: "new",
+    type: "featured",
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const HomeProduct = [
     price: "59.99",
     image: "image/product-11.jpg",
     category: "",
-    type: "new",
+    type: "featured",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ const HomeProduct = [
     price: "12.99",
     image: "image/product-5.png",
     category: "",
-    type: "top",
+    type: "featured",
   },
   {
     id: 10,

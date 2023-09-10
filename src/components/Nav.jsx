@@ -33,8 +33,8 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className="flex py-5 px-10 max-w-[100%] justify-between items-center ">
-          <div>
+        <div className="flex  py-5 px-10 max-w-[100%] justify-between items-center ">
+          <div className="me-3 ">
             <img
               className=" h-12 w-16 md:h-16 md:w-20 cursor-pointer "
               src="/public/image/logo.png"
@@ -48,7 +48,7 @@ const Nav = () => {
               placeholder="Search"
             />
             <button
-              className="bg-red-500 md:h-10   hover:bg-red-700  text-white text-lg font-extrabold py-[12.5px] px-5 rounded-r"
+              className="bg-red-500 md:h-10    hover:bg-red-700  text-white text-lg font-extrabold py-[12.5px] px-5 rounded-r"
               type="button"
             >
               <AiOutlineSearch />
@@ -57,9 +57,9 @@ const Nav = () => {
 
           {isAuthenticated ? (
             // if user is Login then Logout Button will shown and also user profile
-            <div className="flex items-center gap-2 me-9  text-slate-950">
-              <div>
-                <CiLogout className=" text-slate-950 text-md" />
+            <div className="flex items-center gap-2   text-slate-950">
+              <div className="ms-3 ">
+                <CiLogout className=" text-slate-950 text-md " />
               </div>
               <div>
                 <button
@@ -77,7 +77,7 @@ const Nav = () => {
           ) : (
             //if user is Logout then Login Button will shown
             <div className="flex items-center  text-slate-950 gap-2 me-9 ">
-              <div>
+              <div className="ms-3 ">
                 <FiLogIn className="text-slate-950 text-md" />
               </div>
               <div>
