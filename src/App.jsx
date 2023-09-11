@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/Footer.jsx";
 import Nav from "./components/Nav.jsx";
 import Rout from "./components/Rout.jsx";
 function App() {
@@ -7,6 +8,7 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Rout />
+        <Footer />
       </BrowserRouter>
     </>
   );

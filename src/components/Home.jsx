@@ -7,6 +7,8 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import "../index.css";
+
 import HomeProduct from "./HomeProduct";
 const Home = () => {
   /** Trending Product */
@@ -55,7 +57,7 @@ const Home = () => {
   };
 
   return (
-    <div className="m-0 p-0  font-sans box-border bg-slate-200">
+    <div className="m-0 p-0  font-sans box-border ">
       <div className="w-full relative h-[375px]">
         <div
           className="max-w-[100%] h-[400px]  lg:h-[376px] absolute inset-0   bg-center bg-contain bg-no-repeat"
@@ -68,7 +70,7 @@ const Home = () => {
             <h2 className="text-5xl font-semibold my-1 text-gray-100">
               Apple Watch
             </h2>
-            <p className="text-sm mb-6 font-semibold text-gray-100">
+            <p className="text-sm mb-6 mt-3 font-semibold text-gray-100">
               30% off at your first order
             </p>
             <Link
@@ -84,7 +86,7 @@ const Home = () => {
       <div className="py-5 px-7 w-full">
         <div className=" w-full flex justify-center  gap-5">
           <div className=" w-[70%] ">
-            <div className="flex p-3  px-5 rounded-sm  max-w-full bg-slate-50 justify-between items-center ">
+            <div className="flex p-3  px-5 rounded-sm  max-w-full bg-slate-200  justify-between items-center ">
               <div className="heading ">
                 <h2
                   onClick={allTrendingProduct}
@@ -272,26 +274,30 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="product-type w-full py-5 px-7">
-          <div className="container flex w-full justify-between">
+        <div className="product-type w-full p-3 mt-8">
+          <div className="container flex w-full justify-evenly">
             {/* new product */}
-            <div className="box w-[360px] h-[490px] border-solid border-4 border-slate-300 p-3 overflow-hidden">
-              <div className="header  p-3 w-full h-12 bg-slate-300">
-                <h3 className="text-center text-base uppercase font-semibold ">
+            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide   overflow-y-scroll">
+              <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
+                <h3 className="text-center  text-base uppercase font-bold ">
                   New Product
                 </h3>
               </div>
               {newProduct.map((product) => {
                 return (
                   <div
-                    className="productBox h-28  flex w-full p-2 border-solid border-4 border-slate-300"
+                    className="productBox h-28  flex items-center justify-evenly w-full p-2 border-solid border-b-2 border-gray-300"
                     key={product.id}
                   >
                     <div className="imgBox ">
-                      <img className="w-24 h-20" src={product.image} alt="" />
+                      <img
+                        className="w-24 h-20 rounded-sm"
+                        src={product.image}
+                        alt=""
+                      />
                     </div>
-                    <div className="detail ms-7 ">
-                      <h3 className="text-sm text-gray-400 uppercase font-semibold tracking-wider">
+                    <div className="detail ms-3 ">
+                      <h3 className="text-sm text-gray-600 uppercase font-semibold tracking-wide">
                         {product.name}
                       </h3>
                       <p className="mt-1 text-red-500 font-semibold text-sm ">
@@ -316,27 +322,40 @@ const Home = () => {
 
             {/* featured product */}
 
-            <div className="box w-[400px] h-[490px] border-solid border-4 border-slate-300 p-3 overflow-hidden">
-              <div className="header">
-                <h3>Featured Product</h3>
+            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide overflow-y-scroll">
+              <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
+                <h3 className="text-center  text-base uppercase font-bold ">
+                  Featured Product
+                </h3>
               </div>
               {featuredProduct.map((product) => {
                 return (
-                  <div className="productBox" key={product.id}>
-                    <div className="imgBox">
-                      <img src={product.image} alt="" />
+                  <div
+                    className="productBox h-28  flex items-center justify-evenly w-full p-2 border-solid border-b-2 border-gray-300"
+                    key={product.id}
+                  >
+                    <div className="imgBox ">
+                      <img
+                        className="w-24 h-20 rounded-sm"
+                        src={product.image}
+                        alt=""
+                      />
                     </div>
-                    <div className="detail">
-                      <h3>{product.name}</h3>
-                      <p>{product.price}</p>
-                      <div className="icon">
-                        <button>
+                    <div className="detail ms-5 ">
+                      <h3 className="text-sm text-gray-600 uppercase font-semibold tracking-wide">
+                        {product.name}
+                      </h3>
+                      <p className="mt-1 text-red-500 font-semibold text-sm ">
+                        $ {product.price}
+                      </p>
+                      <div className="icon mt-2 flex">
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500  p-2 ms-2 hover:text-slate-950 hover:bg-zinc-400 transition-all duration-300 ease-in-out">
                           <AiFillEye />
                         </button>
-                        <button>
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiFillHeart />
                         </button>
-                        <button>
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiOutlineShoppingCart />
                         </button>
                       </div>
@@ -347,28 +366,40 @@ const Home = () => {
             </div>
 
             {/* top product */}
-
-            <div className="box w-[400px] h-[490px] border-solid border-4 border-slate-300 p-3 overflow-hidden">
-              <div className="header">
-                <h3>Top Product</h3>
+            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide  overflow-y-scroll">
+              <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
+                <h3 className="text-center  text-base uppercase font-bold ">
+                  Top Product
+                </h3>
               </div>
               {topProduct.map((product) => {
                 return (
-                  <div className="productBox" key={product.id}>
-                    <div className="imgBox">
-                      <img src={product.image} alt="" />
+                  <div
+                    className="productBox h-28  flex items-center justify-evenly w-full p-2 border-solid border-b-2 border-gray-300"
+                    key={product.id}
+                  >
+                    <div className="imgBox ">
+                      <img
+                        className="w-24 h-20 rounded-sm"
+                        src={product.image}
+                        alt=""
+                      />
                     </div>
-                    <div className="detail">
-                      <h3>{product.name}</h3>
-                      <p>{product.price}</p>
-                      <div className="icon">
-                        <button>
+                    <div className="detail ms-5 ">
+                      <h3 className="text-sm text-gray-600 uppercase font-semibold tracking-wide">
+                        {product.name}
+                      </h3>
+                      <p className="mt-1 text-red-500 font-semibold text-sm ">
+                        $ {product.price}
+                      </p>
+                      <div className="icon mt-2 flex">
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500  p-2 ms-2 hover:text-slate-950 hover:bg-zinc-400 transition-all duration-300 ease-in-out">
                           <AiFillEye />
                         </button>
-                        <button>
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiFillHeart />
                         </button>
-                        <button>
+                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiOutlineShoppingCart />
                         </button>
                       </div>
