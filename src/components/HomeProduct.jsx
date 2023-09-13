@@ -4,7 +4,7 @@ const HomeProduct = [
     name: "Product 1",
     price: "19.99",
     image: "image/product-12.jpg",
-    category: "",
+    category: "tv",
     type: "new",
   },
   {
@@ -12,7 +12,7 @@ const HomeProduct = [
     name: "Product 2",
     price: "29.99",
     image: "image/product-1.jpg",
-    category: "",
+    category: "laptop",
     type: "new",
   },
   {
@@ -20,7 +20,7 @@ const HomeProduct = [
     name: "Product 3",
     price: "9.99",
     image: "image/product-6.png",
-    category: "",
+    category: "watch",
     type: "featured",
   },
   {
@@ -28,7 +28,7 @@ const HomeProduct = [
     name: "Product 4",
     price: "49.99",
     image: "image/product-8.jpg",
-    category: "",
+    category: "headphone",
     type: "new",
   },
   {
@@ -36,7 +36,7 @@ const HomeProduct = [
     name: "Product 5",
     price: "39.99",
     image: "image/product-3.png",
-    category: "",
+    category: "laptop",
     type: "new",
   },
   {
@@ -44,7 +44,7 @@ const HomeProduct = [
     name: "Product 6",
     price: "15.99",
     image: "image/product-2.jpg",
-    category: "",
+    category: "laptop",
     type: "top",
   },
   {
@@ -52,7 +52,7 @@ const HomeProduct = [
     name: "Product 7",
     price: "59.99",
     image: "image/product-11.jpg",
-    category: "",
+    category: "mobile",
     type: "featured",
   },
   {
@@ -60,7 +60,7 @@ const HomeProduct = [
     name: "Product 8",
     price: "34.99",
     image: "image/product-4.png",
-    category: "",
+    category: "watch",
     type: "new",
   },
   {
@@ -68,7 +68,7 @@ const HomeProduct = [
     name: "Product 9",
     price: "12.99",
     image: "image/product-5.png",
-    category: "",
+    category: "watch",
     type: "featured",
   },
   {
@@ -76,7 +76,7 @@ const HomeProduct = [
     name: "Product 10",
     price: "79.99",
     image: "image/product-10.png",
-    category: "",
+    category: "electronics",
     type: "top",
   },
   {
@@ -84,7 +84,7 @@ const HomeProduct = [
     name: "Product 11",
     price: "79.99",
     image: "image/product-7.png",
-    category: "",
+    category: "headphone",
     type: "new",
   },
   {
@@ -92,7 +92,7 @@ const HomeProduct = [
     name: "Product 11",
     price: "79.99",
     image: "image/product-9.jpg",
-    category: "",
+    category: "electronics",
     type: "top",
   },
 ];

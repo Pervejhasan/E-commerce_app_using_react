@@ -1,11 +1,12 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import PropTypes from "prop-types";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { CiLogout } from "react-icons/ci";
 import { FiLogIn } from "react-icons/fi";
 import { MdLocalShipping } from "react-icons/md";
 import { Link } from "react-router-dom";
-const Nav = () => {
+const Nav = ({ search, setSearch, searchProduct }) => {
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
     useAuth0();
   if (isLoading) {
@@ -46,10 +47,13 @@ const Nav = () => {
               className="md:h-10  sm:w-44 md:w-80  focus:outline-none border text-slate-400  border-gray-300 rounded-l p-2 "
               type="text"
               placeholder="Search"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
             <button
               className="bg-red-500 md:h-10    hover:bg-red-700  text-white text-lg font-extrabold py-[12.5px] px-5 rounded-r"
               type="button"
+              onClick={searchProduct}
             >
               <AiOutlineSearch />
             </button>
@@ -148,9 +152,9 @@ const Nav = () => {
               <li>
                 <Link
                   className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
-                  to="/collection"
+                  to="/cart"
                 >
-                  Collection
+                  Cart
                 </Link>
               </li>
               <li>
@@ -181,6 +185,11 @@ const Nav = () => {
       </div>
     </>
   );
+};
+Nav.propTypes = {
+  search: PropTypes.string,
+  setSearch: PropTypes.func,
+  searchProduct: PropTypes.func,
 };
 
 export default Nav;

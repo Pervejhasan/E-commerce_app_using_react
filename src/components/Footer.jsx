@@ -68,7 +68,7 @@ const Footer = () => {
 
             <div className="bottom p-5 mt-7 w-full flex justify-around">
               <div className="box p-4">
-                <h3 className="uppercase text-slate-900 font-semibold text-sm tracking-wide">
+                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
                   Your Account
                 </h3>
                 <ul>
@@ -88,7 +88,7 @@ const Footer = () => {
               </div>
 
               <div className="box p-4">
-                <h3 className="uppercase text-slate-900 font-semibold text-sm tracking-wide">
+                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
                   Products
                 </h3>
                 <ul>
@@ -107,7 +107,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="box p-4">
-                <h3 className="uppercase text-slate-900 font-semibold text-sm tracking-wide">
+                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
                   Contact Us
                 </h3>
                 <ul>

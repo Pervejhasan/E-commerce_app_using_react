@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import {
@@ -10,7 +11,7 @@ import { Link } from "react-router-dom";
 import "../index.css";
 
 import HomeProduct from "./HomeProduct";
-const Home = () => {
+const Home = ({ addToCart }) => {
   /** Trending Product */
   const [trendingProduct, setTrendingProduct] = useState(HomeProduct);
   /** Product Category */
@@ -130,12 +131,12 @@ const Home = () => {
                             alt={product.name}
                             className="w-[80%] h-40 rounded-md me-2"
                           />
-                          <div className="icon flex flex-col  ms-14 group-hover:ms-0  mt-3 transition-all duration-700 ease-in-out">
-                            <div className=" p-3 mt-3 rounded-sm cursor-pointer bg-red-500 shadow-md z-10 ">
-                              <AiFillEye className="text-gray-100 " />
+                          <div className="icon flex flex-col  ms-14 group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
+                            <div className=" p-3 mt-3 rounded-sm bg-gray-400 cursor-pointer  hover:bg-red-500 transition-all duration-300 ease-in-out shadow-md z-10 ">
+                              <AiFillEye className="text-gray-200  " />
                             </div>
-                            <div className="  p-3 mt-3 rounded-sm cursor-pointer  bg-red-500 shadow-md z-10">
-                              <AiFillHeart className="text-gray-100   " />
+                            <div className="  p-3 mt-3 rounded-sm bg-gray-400  cursor-pointer  hover:bg-red-500 transition-all duration-300 ease-in-out shadow-md z-10">
+                              <AiFillHeart className="text-gray-200    " />
                             </div>
                           </div>
                         </div>
@@ -147,7 +148,10 @@ const Home = () => {
                           <p className="text-slate-500 mt-1 font-semibold text-sm tracking-wide">
                             ${product.price}
                           </p>
-                          <button className="w-full bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-4 mt-3 rounded transition-all duration-300">
+                          <button
+                            onClick={() => addToCart(product)}
+                            className="w-full bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-4 mt-3 rounded transition-all duration-300"
+                          >
                             Add to Cart
                           </button>
                         </div>
@@ -310,7 +314,10 @@ const Home = () => {
                         <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiFillHeart />
                         </button>
-                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
+                        <button
+                          onClick={() => addToCart(product)}
+                          className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out"
+                        >
                           <AiOutlineShoppingCart />
                         </button>
                       </div>
@@ -355,7 +362,10 @@ const Home = () => {
                         <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiFillHeart />
                         </button>
-                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
+                        <button
+                          onClick={() => addToCart(product)}
+                          className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out"
+                        >
                           <AiOutlineShoppingCart />
                         </button>
                       </div>
@@ -399,7 +409,10 @@ const Home = () => {
                         <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
                           <AiFillHeart />
                         </button>
-                        <button className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out">
+                        <button
+                          onClick={() => addToCart(product)}
+                          className="bg-inherit outline-none border-2 border-solid border-gray-300 rounded-full text-zinc-500   p-2 ms-2  hover:text-slate-950 hover:bg-zinc-400  transition-all duration-300 ease-in-out"
+                        >
                           <AiOutlineShoppingCart />
                         </button>
                       </div>
@@ -414,5 +427,7 @@ const Home = () => {
     </div>
   );
 };
-
+Home.propTypes = {
+  addToCart: PropTypes.func,
+};
 export default Home;
