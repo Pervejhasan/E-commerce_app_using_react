@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./Cart";
+import Contact from "./Contact";
 import Home from "./Home";
 import Shop from "./Shop";
 
@@ -28,6 +29,7 @@ const Rout = ({
             />
           }
         />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );

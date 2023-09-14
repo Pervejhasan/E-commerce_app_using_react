@@ -1,8 +1,69 @@
 import PropTypes from "prop-types";
-import { AiFillEye, AiFillHeart } from "react-icons/ai";
+import { useState } from "react";
+import { AiFillEye, AiFillHeart, AiOutlineClose } from "react-icons/ai";
 const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
+  //toggle product details
+
+  const [showDetails, setShowDetails] = useState(false);
+  //detail page data
+  const [detail, setDetail] = useState([]);
+
+  const detailPage = (product) => {
+    const detailData = [{ product }];
+    const productDetail = detailData[0]["product"];
+    setDetail(productDetail);
+    setShowDetails(true);
+  };
+
+  //close details
+  const closeDetails = () => {
+    setShowDetails(false);
+  };
   return (
     <div className="m-0 p-0  font-sans box-border  ">
+      {showDetails ? (
+        <>
+          <div className="product-detail    w-[900px] h-[600px] z-50 fixed shadow-2xl top-12 bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[25%]">
+            <button
+              onClick={closeDetails}
+              className=" float-right me-5 mt-5 bg-red-500 text-white hover:bg-red-700 py-2 cursor-pointer px-2 rounded"
+            >
+              <AiOutlineClose />
+            </button>
+
+            <div className="container w-full flex ">
+              <div className="img-box p-2 rounded bg-slate-200 ">
+                <img
+                  className="h-[270px] w-[270px] rounded"
+                  src={detail.image}
+                  alt=""
+                />
+              </div>
+
+              <div className="info mt-5 ms-16 ">
+                <h4 className="text-gray-400 text-base font-bold tracking-wide ">
+                  {detail.category.toUpperCase()}
+                </h4>
+                <h2 className="mt-14 font-semibold text-lg uppercase text-slate-900 ">
+                  {detail.name}
+                </h2>
+                <p className="mt-2 text-gray-400 text-xs tracking-wider font-semibold">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Sapiente, pariatur!
+                </p>
+                <h3 className="mt-2 text-lg text-red-500">$ {detail.price}</h3>
+                <button
+                  onClick={() => addToCart(detail)}
+                  className="bg-red-500 text-white hover:bg-red-700 py-1 cursor-pointer font-semibold px-2 rounded"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : null}
+
       <div className="shop w-full p-5">
         <h2 className="ms-1 uppercase tracking-wider text-2xl font-bold text-slate-950">
           # shop
@@ -67,7 +128,7 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
               </div>
             </div>
 
-            <div className="banner mt-3 w-72 ">
+            <div className="banner mt-3 w-72 z-0">
               <div className="img-box relative border-2 border-gray-300 rounded-sm ">
                 <img src="../../public/image/macbook.png" alt="" />
                 <button className=" absolute bottom-[90px]  ms-7 bg-red-400 text-sm hover:bg-red-500 text-white  py-1 px-2 rounded">
@@ -106,7 +167,10 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                           />
 
                           <div className="icon flex flex-col  ms-14 group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
-                            <div className=" p-3 mt-3  cursor-pointer hover:bg-red-500 transition-all duration-300 ease-in-out  bg-gray-400 border-2 border-solid border-gray-200 rounded  shadow-md z-10 ">
+                            <div
+                              onClick={() => detailPage(product)}
+                              className=" p-3 mt-3  cursor-pointer hover:bg-red-500 transition-all duration-300 ease-in-out  bg-gray-400 border-2 border-solid border-gray-200 rounded  shadow-md z-10 "
+                            >
                               <AiFillEye className="text-gray-200  " />
                             </div>
                             <div className="  p-3 mt-3 rounded cursor-pointer hover:bg-red-500  transition-all duration-300 ease-in-out bg-gray-400 border-2 border-solid  border-gray-200 shadow-md z-10">
