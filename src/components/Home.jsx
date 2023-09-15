@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import {
   BiLogoFacebook,
-  BiLogoInstagram,
+  BiLogoInstagramAlt,
   BiLogoTwitter,
   BiLogoYoutube,
 } from "react-icons/bi";
@@ -85,10 +85,12 @@ const Home = ({ addToCart }) => {
       </div>
 
       <div className="py-5 px-7 w-full">
-        <div className=" w-full flex justify-center  gap-5">
-          <div className=" w-[70%] ">
-            <div className="flex p-3  px-5 rounded-sm  max-w-full bg-slate-200  justify-between items-center ">
-              <div className="heading ">
+        <div className=" w-full flex flex-col sm:flex-row  sm:justify-center  gap-5">
+          {/* 0000000000000000000000000000000000000000 */}
+
+          <div className="left-box flex flex-col justify-center w-full  sm:w-[70%]">
+            <div className="flex  justify-between   p-3  px-5 rounded-sm  max-w-full bg-slate-200 items-center ">
+              <div className="heading">
                 <h2
                   onClick={allTrendingProduct}
                   className="text-base text-slate-950 font-semibold cursor-pointer  hover:text-red-500 transition-all duration-300 ease-in-out"
@@ -117,21 +119,21 @@ const Home = ({ addToCart }) => {
                 </h3>
               </div>
             </div>
-
+            {/* ###################################### */}
             <div className="max-w-full my-5">
               <div className=" w-full flex flex-wrap justify-center gap-5 ">
                 {/* fetch product */}
                 {trendingProduct.map((product) => {
                   return (
                     <div key={product.id}>
-                      <div className=" group box overflow-hidden  h-[305px] w-56 p-3 rounded-md border border-x-2 border-y-2 me-2 shadow-md bg-slate-50 border-gray-200 ">
+                      <div className=" group box overflow-hidden    h-[340px] w-72 p-3 rounded-md border-2 me-2 shadow-md bg-slate-50 border-gray-200 ">
                         <div className="flex p-3 ">
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="w-[80%] h-40 rounded-md me-2"
+                            className="w-[80%] h-full  rounded-md me-5"
                           />
-                          <div className="icon flex flex-col  ms-14 group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
+                          <div className="icon flex flex-col  ms-[60px] group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
                             <div className=" p-3 mt-3 rounded-sm bg-gray-400 cursor-pointer  hover:bg-red-500 transition-all duration-300 ease-in-out shadow-md z-10 ">
                               <AiFillEye className="text-gray-200  " />
                             </div>
@@ -167,7 +169,10 @@ const Home = ({ addToCart }) => {
               </div>
             </div>
           </div>
-          <div className="right-box  w-[25%]">
+
+          {/* 444444444444444444444444444444444444444444444444444 */}
+
+          <div className="right-box   sm:w-[25%]">
             <div className="containers max-w-full">
               <div className="testimonial w-full   border-gray-100 rounded-sm border-solid border-4">
                 <div className="head p-3 w-full bg-slate-100">
@@ -179,7 +184,7 @@ const Home = ({ addToCart }) => {
                 <div className="detail">
                   <div className="img-box">
                     <img
-                      className=""
+                      className="rounded-sm"
                       src="../../public/image/testimonial.jpg"
                       alt="testimonial"
                     />
@@ -200,21 +205,22 @@ const Home = ({ addToCart }) => {
                 </div>
               </div>
 
-              <div className="newsletter bg-zinc-300 border-gray-100 rounded-sm border-solid border-4 text-center mt-3 p-4">
+              <div className="newsletter bg-zinc-300  mb-3 sm:mb-0 border-gray-100 rounded-sm border-solid border-4 text-center mt-3 p-4">
                 <div className="head p-1 w-full ">
-                  <h3 className=" font-semibold text-slate-900 text-lg text-base ">
+                  <h3 className=" font-semibold text-slate-900 text-2xl sm:text-base ">
                     NewsLetter
                   </h3>
                 </div>
-
                 <div className="form">
-                  <p className="text-zinc-500 mb-2">Join Our mailing List</p>
+                  <p className="text-zinc-500 text-base sm:text-sm mb-2">
+                    Join Our mailing List
+                  </p>
                   <input
                     type="email"
                     placeholder="E-mail"
                     id=""
                     autoComplete="off"
-                    className="border w-full border-gray-300 rounded-sm py-1 px-2 focus:outline-none focus:border-red-500"
+                    className="border w-3/4 sm:w-full border-gray-300 rounded py-1 px-2 focus:outline-none focus:border-red-500"
                   />
                   <button className="bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-2 rounded-sm my-2">
                     Subscribe
@@ -227,7 +233,7 @@ const Home = ({ addToCart }) => {
                       <BiLogoTwitter className="text-slate-100  group-hover:text-red-500 " />
                     </div>
                     <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
-                      <BiLogoInstagram className="text-slate-100  group-hover:text-red-500 " />
+                      <BiLogoInstagramAlt className="text-slate-100  group-hover:text-red-500 " />
                     </div>
                     <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
                       <BiLogoYoutube className="text-slate-100  group-hover:text-red-500 " />
@@ -240,36 +246,40 @@ const Home = ({ addToCart }) => {
         </div>
 
         <div className="banners w-full ">
-          <div className="containers max-w-full flex gap-2 ">
-            <div className="left-box w-[30%]">
+          <div className="containers max-w-full flex flex-col sm:flex-row gap-2 ">
+            <div className="left-box w-full  sm:block  sm:w-[30%]">
               <div className="box">
                 <img
-                  className="w-full"
+                  className="  sm:w-full"
                   src="../../public/image/multi-banner-1.jpg"
                   alt=""
                 />
               </div>
-              <div className="box  mt-2">
-                <img src="../../public//image/multi-banner-8.jpg" alt="" />
+              <div className="box    mt-2">
+                <img
+                  className="w-full"
+                  src="../../public//image/multi-banner-8.jpg"
+                  alt=""
+                />
               </div>
             </div>
 
-            <div className="right-box w-3/4">
-              <div className="top max-w-full  flex  justify-between">
+            <div className="right-box w-full sm:w-3/4">
+              <div className="top max-w-full gap-3 sm:gap-0  flex sm:flex-row flex-col  justify-between">
                 <img
-                  className="bg-cover bg-center  w-2/3"
+                  className="bg-cover bg-center w-full sm:w-2/3"
                   src="../../public//image/multi-banner-6.jpg"
                   alt=""
                 />
                 <img
-                  className=" w-[32%] bg-cover bg-center"
+                  className="w-full sm:w-[32.5%] bg-cover bg-center"
                   src="../../public/image/multi-banner-7.jpg"
                   alt=""
                 />
               </div>
               <div className="bottom max-w-full mt-2">
                 <img
-                  className="w-full sm:h-44 lg:h-[324px] object-fit"
+                  className="hidden sm:block  w-full sm:h-44 lg:h-[324px]  object-fit"
                   src="../../public/image/multi-banner-3.png"
                   alt=""
                 />
@@ -278,10 +288,11 @@ const Home = ({ addToCart }) => {
           </div>
         </div>
 
+        {/* ================================= */}
         <div className="product-type w-full p-3 mt-8">
-          <div className="container flex w-full justify-evenly">
+          <div className="container gap-5 sm:gap-0 flex flex-col items-center sm:justify-evenly  sm:flex-row  w-full ">
             {/* new product */}
-            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide   overflow-y-scroll">
+            <div className="box w-full sm:w-96  relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide   overflow-y-scroll">
               <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
                 <h3 className="text-center  text-base uppercase font-bold ">
                   New Product
@@ -329,7 +340,7 @@ const Home = ({ addToCart }) => {
 
             {/* featured product */}
 
-            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide overflow-y-scroll">
+            <div className="box  w-full sm:w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide overflow-y-scroll">
               <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
                 <h3 className="text-center  text-base uppercase font-bold ">
                   Featured Product
@@ -376,7 +387,7 @@ const Home = ({ addToCart }) => {
             </div>
 
             {/* top product */}
-            <div className="box w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide  overflow-y-scroll">
+            <div className="box  w-full sm:w-96 relative h-[500px] border-solid border-4 rounded-sm border-gray-100  scrollbar-hide  overflow-y-scroll">
               <div className="header sticky top-0 left-0  p-3 w-full h-12 bg-slate-100">
                 <h3 className="text-center  text-base uppercase font-bold ">
                   Top Product
@@ -423,6 +434,8 @@ const Home = ({ addToCart }) => {
             </div>
           </div>
         </div>
+
+        {/* ================================================ */}
       </div>
     </div>
   );

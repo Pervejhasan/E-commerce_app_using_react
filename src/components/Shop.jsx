@@ -21,9 +21,10 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
   };
   return (
     <div className="m-0 p-0  font-sans box-border  ">
+      {/* ========================================== */}
       {showDetails ? (
         <>
-          <div className="product-detail    w-[900px] h-[600px] z-50 fixed shadow-2xl top-12 bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[25%]">
+          <div className="product-detail w-[95%] h-[350px]   sm:w-[900px] sm:h-[600px] z-50 fixed shadow-2xl top-12 sm:top-12 bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[2%] sm:left-[25%]">
             <button
               onClick={closeDetails}
               className=" float-right me-5 mt-5 bg-red-500 text-white hover:bg-red-700 py-2 cursor-pointer px-2 rounded"
@@ -31,27 +32,28 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
               <AiOutlineClose />
             </button>
 
-            <div className="container w-full flex ">
-              <div className="img-box p-2 rounded bg-slate-200 ">
+            <div className="containers w-full flex ">
+              <div className="img-box p-2  mt-8 sm:mt-20 ms-5 ">
                 <img
-                  className="h-[270px] w-[270px] rounded"
+                  className=" h-[120px] w-[200px] rounded  border-4 border-solid border-zinc-300   sm:h-[270px] sm:w-[270px] "
                   src={detail.image}
                   alt=""
                 />
               </div>
-
-              <div className="info mt-5 ms-16 ">
-                <h4 className="text-gray-400 text-base font-bold tracking-wide ">
+              <div className="info mt-5 sm:mt-32 ms-10 ">
+                <h4 className="text-gray-500 text-base font-bold tracking-wide ">
                   {detail.category.toUpperCase()}
                 </h4>
-                <h2 className="mt-14 font-semibold text-lg uppercase text-slate-900 ">
+                <h2 className="mt-1 font-bold text-lg uppercase text-slate-900 ">
                   {detail.name}
                 </h2>
-                <p className="mt-2 text-gray-400 text-xs tracking-wider font-semibold">
+                <p className="mt-1 text-gray-400 text-xs tracking-wider font-semibold">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Sapiente, pariatur!
                 </p>
-                <h3 className="mt-2 text-lg text-red-500">$ {detail.price}</h3>
+                <h3 className="mt-2 text-lg font-semibold mb-2 text-red-500">
+                  $ {detail.price}
+                </h3>
                 <button
                   onClick={() => addToCart(detail)}
                   className="bg-red-500 text-white hover:bg-red-700 py-1 cursor-pointer font-semibold px-2 rounded"
@@ -60,6 +62,8 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                 </button>
               </div>
             </div>
+
+            {/* ========================================== */}
           </div>
         </>
       ) : null}
@@ -71,8 +75,9 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
         <p className="my-2 ms-1  text-gray-500 text-sm font-medium">
           Home . Shop
         </p>
-        <div className="containers max-w-full flex ">
-          <div className="left-box w-1/4">
+
+        <div className="containers max-w-full flex   flex-col sm:flex-row">
+          <div className="left-box w-full ms-[16%] sm:ms-0 sm:w-1/4">
             <div className="category w-72  border-4 rounded-sm border-slate-200 border-solid ">
               <div className="header max-w-full p-3 bg-[#f1ebeb]">
                 <h2 className="uppercase tracking-wider text-1xl text-center font-bold text-slate-950">
@@ -130,7 +135,7 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
 
             <div className="banner mt-3 w-72 z-0">
               <div className="img-box relative border-2 border-gray-300 rounded-sm ">
-                <img src="../../public/image/macbook.png" alt="" />
+                <img className="" src="../../public/image/macbook.png" alt="" />
                 <button className=" absolute bottom-[90px]  ms-7 bg-red-400 text-sm hover:bg-red-500 text-white  py-1 px-2 rounded">
                   Buy now
                 </button>
@@ -138,9 +143,9 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
             </div>
           </div>
 
-          <div className="right-box w-[73%]">
+          <div className="right-box w-full   sm:w-[73%]">
             <div className="banner max-w-full">
-              <div className="img-box">
+              <div className="img-box hidden sm:block">
                 <img
                   className="w-full object-cover"
                   src="../../public/image/ihone.jpg"
@@ -150,7 +155,7 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
             </div>
 
             <div className="max-w-full my-5">
-              <h2 className="uppercase mt-3 mb-3 text-gray-950 tracking-wide font-semibold text-2xl ">
+              <h2 className="uppercase text-center sm:text-left mt-3 mb-3 text-gray-950 tracking-wide font-semibold text-2xl ">
                 Shop Product
               </h2>
               <div className=" w-full flex flex-wrap justify-center gap-5 ">
@@ -158,15 +163,15 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                 {shop.map((product) => {
                   return (
                     <div key={product.id}>
-                      <div className=" group box overflow-hidden  h-[305px] w-56 p-3 rounded-md border border-x-2 border-y-2 me-2 shadow-md bg-slate-50 border-gray-200 ">
+                      <div className=" group box overflow-hidden   h-[340px] w-72 p-3 rounded-md border border-x-2 border-y-2 me-2 shadow-md bg-slate-50 border-gray-200 ">
                         <div className="flex p-3 ">
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="w-[80%] h-40 rounded-md me-2"
+                            className="w-[80%] h-full rounded-md me-2"
                           />
 
-                          <div className="icon flex flex-col  ms-14 group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
+                          <div className="icon flex flex-col  ms-[65px]  group-hover:ms-0  mt-3 transition-all duration-500 ease-in-out">
                             <div
                               onClick={() => detailPage(product)}
                               className=" p-3 mt-3  cursor-pointer hover:bg-red-500 transition-all duration-300 ease-in-out  bg-gray-400 border-2 border-solid border-gray-200 rounded  shadow-md z-10 "
@@ -188,7 +193,7 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                           </p>
                           <button
                             onClick={() => addToCart(product)}
-                            className="w-full bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-4 mt-3 rounded transition-all duration-300"
+                            className="w-full  bg-red-500 hover:bg-red-700 text-white font-semibold py-1 px-4 mt-3 rounded transition-all duration-300"
                           >
                             Add to Cart
                           </button>
