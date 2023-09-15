@@ -19,22 +19,20 @@ const Nav = ({ search, setSearch, searchProduct }) => {
         <div className="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
       </div>
     );
-
     // <div className="text-center font-bold mt-96">Loading ...</div>;
   }
   const handleClick = () => {
     setClick(!click);
   };
   //navbar design
-
   const content = (
     <>
       <div className="lg:hidden block absolute z-50 top-[220px] w-full left-0 right-0 bg-slate-950 transition">
         <ul className="text-center text-base p-20 ">
           <li className="my-4 py-4 border-b border-slate-800 ">
             <Link
-              spy={true}
-              scroll={true}
+              spy="true"
+              scroll="true"
               className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
               to="/"
             >
@@ -43,8 +41,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </li>
           <li className="my-4 py-4 border-b border-slate-800 ">
             <Link
-              spy={true}
-              scroll={true}
+              spy="true"
+              scroll="true"
               className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
               to="/shop"
             >
@@ -53,8 +51,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </li>
           <li className="my-4 py-4 border-b border-slate-800 ">
             <Link
-              spy={true}
-              scroll={true}
+              spy="true"
+              scroll="true"
               className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
               to="/cart"
             >
@@ -63,8 +61,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </li>
           <li className="my-4 py-4 border-b border-slate-800 ">
             <Link
-              spy={true}
-              scroll={true}
+              spy="true"
+              scroll="true"
               className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
               to="/about"
             >
@@ -73,8 +71,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </li>
           <li className="my-4 py-4 border-b border-slate-800 ">
             <Link
-              spy={true}
-              scroll={true}
+              spy="true"
+              scroll="true"
               className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
               to="/contact"
             >
@@ -209,8 +207,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                 <ul className="flex gap-3 ">
                   <li>
                     <Link
-                      spy={true}
-                      scroll={true}
+                      spy="true"
+                      scroll="true"
                       className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
                       to="/"
                     >
@@ -219,8 +217,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                   </li>
                   <li>
                     <Link
-                      spy={true}
-                      scroll={true}
+                      spy="true"
+                      scroll="true"
                       className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
                       to="/shop"
                     >
@@ -229,8 +227,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                   </li>
                   <li>
                     <Link
-                      spy={true}
-                      scroll={true}
+                      spy="true"
+                      scroll="true"
                       className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
                       to="/cart"
                     >
@@ -239,8 +237,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                   </li>
                   <li>
                     <Link
-                      spy={true}
-                      scroll={true}
+                      spy="true"
+                      scroll="true"
                       className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
                       to="/about"
                     >
@@ -249,8 +247,8 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                   </li>
                   <li>
                     <Link
-                      spy={true}
-                      scroll={true}
+                      spy="true"
+                      scroll="true"
                       className="text-slate-200 hover:text-red-500 transition-all duration-300 ease-in-out"
                       to="/contact"
                     >

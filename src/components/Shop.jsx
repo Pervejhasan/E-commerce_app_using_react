@@ -3,25 +3,21 @@ import { useState } from "react";
 import { AiFillEye, AiFillHeart, AiOutlineClose } from "react-icons/ai";
 const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
   //toggle product details
-
   const [showDetails, setShowDetails] = useState(false);
   //detail page data
   const [detail, setDetail] = useState([]);
-
   const detailPage = (product) => {
     const detailData = [{ product }];
     const productDetail = detailData[0]["product"];
     setDetail(productDetail);
     setShowDetails(true);
   };
-
   //close details
   const closeDetails = () => {
     setShowDetails(false);
   };
   return (
     <div className="m-0 p-0  font-sans box-border  ">
-      {/* ========================================== */}
       {showDetails ? (
         <>
           <div className="product-detail w-[95%] h-[350px]   sm:w-[900px] sm:h-[600px] z-50 fixed shadow-2xl top-12 sm:top-12 bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[2%] sm:left-[25%]">
@@ -62,8 +58,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                 </button>
               </div>
             </div>
-
-            {/* ========================================== */}
           </div>
         </>
       ) : null}

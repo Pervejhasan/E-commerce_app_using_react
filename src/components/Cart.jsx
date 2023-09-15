@@ -29,9 +29,7 @@ const Cart = ({ cart, setCart }) => {
       })
     );
   };
-
   //remove cart product
-
   const removeProduct = (product) => {
     const exist = cart.find((rProduct) => {
       return rProduct.id === product.id;
@@ -50,7 +48,6 @@ const Cart = ({ cart, setCart }) => {
     (price, item) => price + item.quantity * item.price,
     0
   );
-
   return (
     <div className="m-0 p-0 box-border font-sans">
       <div className="cart w-full p-5">
@@ -69,7 +66,6 @@ const Cart = ({ cart, setCart }) => {
             </div>
           </>
         )}
-
         <div className="container max-w-full p-4">
           {cart.map((product) => {
             return (
@@ -97,7 +93,6 @@ const Cart = ({ cart, setCart }) => {
                         Total: ${(product.price * product.quantity).toFixed(2)}
                       </p>
                     </div>
-
                     <div className="quantity mt-16 ms-7">
                       <button
                         onClick={() => incrementQuantity(product)}
@@ -117,7 +112,6 @@ const Cart = ({ cart, setCart }) => {
                         -
                       </button>
                     </div>
-
                     <div className="icon mt-[65px] ms-8">
                       <div
                         onClick={() => removeProduct(product)}
@@ -132,7 +126,6 @@ const Cart = ({ cart, setCart }) => {
             );
           })}
         </div>
-
         <div className="bottom  text-center">
           {cart.length > 0 && (
             <>
