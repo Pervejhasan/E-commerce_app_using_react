@@ -20,7 +20,7 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
     <div className="m-0 p-0  font-sans box-border  ">
       {showDetails ? (
         <>
-          <div className="product-detail w-[95%] h-[350px]   sm:w-[900px] sm:h-[600px] z-50 fixed shadow-2xl top-12 sm:top-12 bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[2%] sm:left-[25%]">
+          <div className="product-detail w-[80%] h-[350px]   sm:w-[900px] sm:h-[600px] z-50 fixed shadow-2xl top-12  bg-gray-100 border-4 border-solid border-gray-300 rounded-lg left-[2%] sm:left-[25%]">
             <button
               onClick={closeDetails}
               className=" float-right me-5 mt-5 bg-red-500 text-white hover:bg-red-700 py-2 cursor-pointer px-2 rounded"

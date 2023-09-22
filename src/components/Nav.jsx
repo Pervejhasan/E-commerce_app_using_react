@@ -99,7 +99,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </div>
         </div>
 
-        <div className="flex px-8  py-5 sm:px-10 max-w-[100%] justify-between items-center ">
+        <div className="flex px-7  py-5 sm:px-10 max-w-[100%] justify-between items-center ">
           <div className="me-3 ">
             <img
               className=" h-14 w-[70px]   sm:h-16 sm:w-20 cursor-pointer "
@@ -151,7 +151,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
               </div>
               <div>
                 <button
-                  className="text-sm  sm:text-md"
+                  className="text-sm   sm:text-md"
                   onClick={() => loginWithRedirect()}
                 >
                   Login
