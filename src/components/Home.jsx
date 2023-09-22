@@ -83,11 +83,8 @@ const Home = ({ addToCart }) => {
           </div>
         </div>
       </div>
-
       <div className="py-5 px-7 w-full">
         <div className=" w-full flex flex-col sm:flex-row  sm:justify-center  gap-5">
-          {/* 0000000000000000000000000000000000000000 */}
-
           <div className="left-box flex flex-col justify-center w-full  sm:w-[70%]">
             <div className="flex  justify-between   p-3  px-5 rounded-sm  max-w-full bg-slate-200 items-center ">
               <div className="heading">
@@ -119,7 +116,6 @@ const Home = ({ addToCart }) => {
                 </h3>
               </div>
             </div>
-            {/* ###################################### */}
             <div className="max-w-full my-5">
               <div className=" w-full flex flex-wrap justify-center gap-5 ">
                 {/* fetch product */}
@@ -142,7 +138,6 @@ const Home = ({ addToCart }) => {
                             </div>
                           </div>
                         </div>
-
                         <div className="ms-3 p-3">
                           <h3 className="uppercase text-xs  text-gray-500 font-bold">
                             {product.name}
@@ -169,9 +164,6 @@ const Home = ({ addToCart }) => {
               </div>
             </div>
           </div>
-
-          {/* 444444444444444444444444444444444444444444444444444 */}
-
           <div className="right-box   sm:w-[25%]">
             <div className="containers max-w-full">
               <div className="testimonial w-full   border-gray-100 rounded-sm border-solid border-4">
@@ -180,7 +172,6 @@ const Home = ({ addToCart }) => {
                     Our Testimonial
                   </h3>
                 </div>
-
                 <div className="detail">
                   <div className="img-box">
                     <img
@@ -189,7 +180,6 @@ const Home = ({ addToCart }) => {
                       alt="testimonial"
                     />
                   </div>
-
                   <div className="info text-center p-2">
                     <h3 className="text-sm text-slate-900 font-bold mt-3">
                       Amelia Jeffer
@@ -204,7 +194,6 @@ const Home = ({ addToCart }) => {
                   </div>
                 </div>
               </div>
-
               <div className="newsletter bg-zinc-300  mb-3 sm:mb-0 border-gray-100 rounded-sm border-solid border-4 text-center mt-3 p-4">
                 <div className="head p-1 w-full ">
                   <h3 className=" font-semibold text-slate-900 text-2xl sm:text-base ">
@@ -244,7 +233,6 @@ const Home = ({ addToCart }) => {
             </div>
           </div>
         </div>
-
         <div className="banners w-full ">
           <div className="containers max-w-full flex flex-col sm:flex-row gap-2 ">
             <div className="left-box w-full  sm:block  sm:w-[30%]">
@@ -263,7 +251,6 @@ const Home = ({ addToCart }) => {
                 />
               </div>
             </div>
-
             <div className="right-box w-full sm:w-3/4">
               <div className="top max-w-full gap-3 sm:gap-0  flex sm:flex-row flex-col  justify-between">
                 <img
@@ -287,8 +274,6 @@ const Home = ({ addToCart }) => {
             </div>
           </div>
         </div>
-
-        {/* ================================= */}
         <div className="product-type w-full p-3 mt-8">
           <div className="container gap-5 sm:gap-0 flex flex-col items-center sm:justify-evenly  sm:flex-row  w-full ">
             {/* new product */}
@@ -434,8 +419,6 @@ const Home = ({ addToCart }) => {
             </div>
           </div>
         </div>
-
-        {/* ================================================ */}
       </div>
     </div>
   );

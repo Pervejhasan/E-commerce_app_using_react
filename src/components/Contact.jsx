@@ -29,7 +29,6 @@ const Contact = () => {
         message,
       }),
     };
-
     const send = await fetch(
       "https://react-ecommerce-c072d-default-rtdb.firebaseio.com/Message.json",
       option
@@ -101,7 +100,6 @@ const Contact = () => {
                 onChange={data}
               />
             </div>
-
             <div className="mb-4">
               <label
                 htmlFor="message"

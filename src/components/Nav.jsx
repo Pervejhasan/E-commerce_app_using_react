@@ -10,7 +10,6 @@ import { MdLocalShipping } from "react-icons/md";
 import { Link } from "react-router-dom";
 const Nav = ({ search, setSearch, searchProduct }) => {
   const [click, setClick] = useState(false);
-
   const { loginWithRedirect, logout, user, isAuthenticated, isLoading } =
     useAuth0();
   if (isLoading) {
@@ -202,7 +201,6 @@ const Nav = ({ search, setSearch, searchProduct }) => {
               )
             }
           </div>
-
           {/*navbar part start*/}
           <nav>
             <div className="lg:flex md:flex lg:flex-1 items-center justify-center hidden">
@@ -261,9 +259,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                 </ul>
               </div>
             </div>
-
             <div>{click && content}</div>
-
             <button
               className="block sm:hidden transition"
               onClick={handleClick}
@@ -276,7 +272,6 @@ const Nav = ({ search, setSearch, searchProduct }) => {
             </button>
           </nav>
           {/*navbar part end*/}
-
           <div>
             <p className="text-slate-200 bg-red-500 p-2 sm:p-3 rounded-sm me-2 sm:me-5 font-semibold text-[10px] sm:text-sm ">
               flat 10% over all iphone

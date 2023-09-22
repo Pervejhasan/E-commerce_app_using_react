@@ -18,7 +18,6 @@ const Footer = () => {
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </div>
-
             <div className="box flex  g p-3">
               <div className="icon-box text-red-600 text-2xl">
                 <FaShippingFast />
@@ -53,7 +52,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
           <div className="right-box bg-slate-950 sm:bg-slate-100 p-3 w-full sm:w-[69%]">
             <div className="header max-w-full text-center">
               <img
@@ -66,7 +64,6 @@ const Footer = () => {
                 inventore suscipit quos nesciunt odit consectetur.
               </p>
             </div>
-
             <div className="bottom p-5 mt-7 w-full flex flex-col sm:flex-row items-center justify-around">
               <div className="box p-4 text-center sm:text-left">
                 <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
@@ -87,7 +84,6 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="box p-4 text-center sm:text-left">
                 <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
                   Products
@@ -107,7 +103,6 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-
               <div className="box p-4 text-center sm:text-left">
                 <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
                   Contact Us

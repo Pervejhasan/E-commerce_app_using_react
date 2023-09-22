@@ -27,7 +27,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
             >
               <AiOutlineClose />
             </button>
-
             <div className="containers w-full flex ">
               <div className="img-box p-2  mt-8 sm:mt-20 ms-5 ">
                 <img
@@ -61,7 +60,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
           </div>
         </>
       ) : null}
-
       <div className="shop w-full p-5">
         <h2 className="ms-1 uppercase tracking-wider text-2xl font-bold text-slate-950">
           # shop
@@ -69,7 +67,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
         <p className="my-2 ms-1  text-gray-500 text-sm font-medium">
           Home . Shop
         </p>
-
         <div className="containers max-w-full flex   flex-col sm:flex-row">
           <div className="left-box w-full ms-[16%] sm:ms-0 sm:w-1/4">
             <div className="category w-72  border-4 rounded-sm border-slate-200 border-solid ">
@@ -86,7 +83,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                   >
                     # All
                   </li>
-
                   <li
                     onClick={() => Filter("tv")}
                     className="font-medium text-slate-500 hover:text-red-700 transition-all duration-300 ease-in-out ms-1 hover:ms-2 cursor-pointer"
@@ -126,7 +122,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                 </ul>
               </div>
             </div>
-
             {/* <div className="banner mt-3 w-72 z-0 hidden sm:block">
               <div className="img-box relative border-2 border-gray-300 rounded-sm ">
                 <img className="" src="../../public/image/macbook.png" alt="" />
@@ -136,7 +131,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
               </div>
             </div> */}
           </div>
-
           <div className="right-box w-full   sm:w-[73%]">
             <div className="banner max-w-full">
               <div className="img-box hidden sm:block">
@@ -147,7 +141,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                 />
               </div>
             </div>
-
             <div className="max-w-full my-5">
               <h2 className="uppercase text-center sm:text-left mt-3 mb-3 text-gray-950 tracking-wide font-semibold text-2xl ">
                 Shop Product
@@ -177,7 +170,6 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
                             </div>
                           </div>
                         </div>
-
                         <div className="ms-3 p-3 text-center">
                           <h3 className="uppercase text-xs  text-gray-500 font-bold">
                             {product.name}
