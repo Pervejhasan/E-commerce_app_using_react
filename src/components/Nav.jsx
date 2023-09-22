@@ -109,7 +109,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           </div>
           <div className="flex">
             <input
-              className="  w-44 h-9 sm:w-80 sm:h-10  focus:outline-none border text-slate-400  border-gray-300 rounded-l p-2 "
+              className="  w-40 h-9 sm:w-80 sm:h-10  focus:outline-none border text-slate-400  border-gray-300 rounded-l p-2 "
               type="text"
               placeholder="Search"
               value={search}
@@ -278,7 +278,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           {/*navbar part end*/}
 
           <div>
-            <p className="text-slate-200 bg-red-500 p-2 sm:p-3 rounded-sm me-4 sm:me-5 font-semibold text-[10px] sm:text-sm ">
+            <p className="text-slate-200 bg-red-500 p-2 sm:p-3 rounded-sm me-3 sm:me-5 font-semibold text-[10px] sm:text-sm ">
               flat 10% over all iphone
             </p>
           </div>
