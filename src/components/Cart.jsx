@@ -73,7 +73,7 @@ const Cart = ({ cart, setCart }) => {
                 <div className="box h-72 flex w-full border-2 rounded border-solid mt-6 border-gray-200">
                   <div className="img_box">
                     <img
-                      className="w-24 h-24    rounded border-4 border-solid border-gray-300 mt-16 sm:mt-10 ms-3  sm:w-[200px] sm:h-[200px]"
+                      className="w-20 h-20    rounded border-4 border-solid border-gray-300 mt-20 sm:mt-10 ms-3  sm:w-[200px] sm:h-[200px]"
                       src={product.image}
                       alt=""
                     />
@@ -83,17 +83,17 @@ const Cart = ({ cart, setCart }) => {
                       <h4 className="uppercase text-sm sm:text-base text-slate-600 font-medium">
                         {product.category.toUpperCase()}
                       </h4>
-                      <h3 className="mt-2 text-base sm:text-lg text-slate-900 uppercase font-semibold ">
+                      <h3 className="mt-2 text-xs sm:text-lg text-slate-900 uppercase font-semibold ">
                         {product.name}
                       </h3>
-                      <p className="mt-2 text-base sm:text-lg font-medium text-slate-900  ">
+                      <p className="mt-2 text-xs sm:text-lg font-medium text-slate-900  ">
                         Price: ${product.price}
                       </p>
-                      <p className="text-base sm:text-lg font-medium">
+                      <p className="text-xs sm:text-lg font-medium">
                         Total: ${(product.price * product.quantity).toFixed(2)}
                       </p>
                     </div>
-                    <div className="quantity mt-16 ms-7">
+                    <div className="quantity mt-16 ms-4 sm:ms-7">
                       <button
                         onClick={() => incrementQuantity(product)}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-2 sm:px-2 rounded"
@@ -102,7 +102,7 @@ const Cart = ({ cart, setCart }) => {
                       </button>
                       <input
                         type="number"
-                        className="w-10 sm:w-14 text-center border-2 border-solid mx-2 rounded border-gray-200 outline-none "
+                        className="w-7 sm:w-14 text-center border-2 border-solid mx-2 rounded border-gray-200 outline-none "
                         value={product.quantity}
                       />
                       <button
@@ -112,7 +112,7 @@ const Cart = ({ cart, setCart }) => {
                         -
                       </button>
                     </div>
-                    <div className="icon mt-[65px] ms-8">
+                    <div className="icon mt-[65px] ms-4 sm:ms-8">
                       <div
                         onClick={() => removeProduct(product)}
                         className="bg-red-500  hover:bg-red-700 p-1 me-2 sm:py-2 cursor-pointer sm:px-2 rounded"
