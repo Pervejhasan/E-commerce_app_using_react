@@ -5,7 +5,8 @@ const Footer = () => {
     <div className="m-0 p-0 box-border">
       <div className="footer w-full p-7 bg-slate-100">
         <div className="containers flex flex-col sm:flex-row max-w-full">
-          <div className="left-box    w-full ms-20 sm:ms-0  sm:w-[30%] p-5 border-r-0 sm:border-r-2 border-solid border-gray-300">
+          {/* ms-20 sm:ms-0   */}
+          <div className="left-box    w-full sm:w-[30%] p-5 border-r-0 sm:border-r-2 border-solid border-gray-300">
             <div className="box   flex  g p-3">
               <div className="icon-box text-red-600 text-2xl">
                 <FaPiggyBank />
@@ -53,7 +54,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="right-box p-3 w-full sm:w-[69%]">
+          <div className="right-box bg-slate-950 sm:bg-slate-100 p-3 w-full sm:w-[69%]">
             <div className="header max-w-full text-center">
               <img
                 className="h-20 w-20 ms-[40%]"
@@ -68,7 +69,7 @@ const Footer = () => {
 
             <div className="bottom p-5 mt-7 w-full flex flex-col sm:flex-row items-center justify-around">
               <div className="box p-4 text-center sm:text-left">
-                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
+                <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
                   Your Account
                 </h3>
                 <ul>
@@ -88,7 +89,7 @@ const Footer = () => {
               </div>
 
               <div className="box p-4 text-center sm:text-left">
-                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
+                <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
                   Products
                 </h3>
                 <ul>
@@ -108,7 +109,7 @@ const Footer = () => {
               </div>
 
               <div className="box p-4 text-center sm:text-left">
-                <h3 className="uppercase text-slate-900 font-bold text-sm tracking-wide">
+                <h3 className="uppercase text-white sm:text-slate-950 font-bold text-sm tracking-wide">
                   Contact Us
                 </h3>
                 <ul>

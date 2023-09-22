@@ -102,14 +102,14 @@ const Nav = ({ search, setSearch, searchProduct }) => {
         <div className="flex px-8  py-5 sm:px-10 max-w-[100%] justify-between items-center ">
           <div className="me-3 ">
             <img
-              className=" h-16 w-20   sm:h-16 sm:w-20 cursor-pointer "
+              className=" h-14 w-[70px]   sm:h-16 sm:w-20 cursor-pointer "
               src="/public/image/logo.png"
               alt=""
             />
           </div>
           <div className="flex">
             <input
-              className="  w-48 h-9 sm:w-80 sm:h-10  focus:outline-none border text-slate-400  border-gray-300 rounded-l p-2 "
+              className="  w-44 h-9 sm:w-80 sm:h-10  focus:outline-none border text-slate-400  border-gray-300 rounded-l p-2 "
               type="text"
               placeholder="Search"
               value={search}
@@ -128,11 +128,11 @@ const Nav = ({ search, setSearch, searchProduct }) => {
             // if user is Login then Logout Button will shown and also user profile
             <div className="flex items-center gap-2   text-slate-950">
               <div className="ms-3 ">
-                <CiLogout className=" text-slate-950 text-md " />
+                <CiLogout className=" text-slate-950 text-sm sm:text-md " />
               </div>
               <div>
                 <button
-                  className="text-md"
+                  className=" text-sm sm:text-md"
                   onClick={() =>
                     logout({
                       logoutParams: { returnTo: window.location.origin },
@@ -147,10 +147,13 @@ const Nav = ({ search, setSearch, searchProduct }) => {
             //if user is Logout then Login Button will shown
             <div className="flex items-center  text-slate-950 gap-2 me-9 ">
               <div className="ms-3 ">
-                <FiLogIn className="text-slate-950 text-md" />
+                <FiLogIn className="text-slate-950 text-sm sm:text-md" />
               </div>
               <div>
-                <button className="text-md" onClick={() => loginWithRedirect()}>
+                <button
+                  className="text-sm  sm:text-md"
+                  onClick={() => loginWithRedirect()}
+                >
                   Login
                 </button>
               </div>

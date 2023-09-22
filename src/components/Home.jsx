@@ -226,17 +226,17 @@ const Home = ({ addToCart }) => {
                     Subscribe
                   </button>
                   <div className="icon-box mt-4 w-full flex justify-center gap-2">
-                    <div className="group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
-                      <BiLogoFacebook className="text-slate-100  group-hover:text-red-500 " />
+                    <div className="group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-300 ease-in">
+                      <BiLogoFacebook className="text-slate-100  group-hover:text-red-500 transition-all duration-300 ease-in" />
                     </div>
-                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
-                      <BiLogoTwitter className="text-slate-100  group-hover:text-red-500 " />
+                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-300 ease-in">
+                      <BiLogoTwitter className="text-slate-100  group-hover:text-red-500 transition-all duration-300 ease-in" />
                     </div>
-                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
-                      <BiLogoInstagramAlt className="text-slate-100  group-hover:text-red-500 " />
+                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-300 ease-in">
+                      <BiLogoInstagramAlt className="text-slate-100  group-hover:text-red-500 transition-all duration-300 ease-in" />
                     </div>
-                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-500 ease-in-out">
-                      <BiLogoYoutube className="text-slate-100  group-hover:text-red-500 " />
+                    <div className="icon group icon rounded-full cursor-pointer shadow-md bg-red-500 p-2 hover:bg-slate-100 transition-all duration-300 ease-in">
+                      <BiLogoYoutube className="text-slate-100  group-hover:text-red-500 transition-all duration-300 ease-in" />
                     </div>
                   </div>
                 </div>
