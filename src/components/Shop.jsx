@@ -127,14 +127,14 @@ const Shop = ({ shop, Filter, allCategoryFilter, addToCart }) => {
               </div>
             </div>
 
-            <div className="banner mt-3 w-72 z-0">
+            {/* <div className="banner mt-3 w-72 z-0 hidden sm:block">
               <div className="img-box relative border-2 border-gray-300 rounded-sm ">
                 <img className="" src="../../public/image/macbook.png" alt="" />
                 <button className=" absolute bottom-[90px]  ms-7 bg-red-400 text-sm hover:bg-red-500 text-white  py-1 px-2 rounded">
                   Buy now
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="right-box w-full   sm:w-[73%]">
