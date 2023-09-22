@@ -87,13 +87,13 @@ const Nav = ({ search, setSearch, searchProduct }) => {
   return (
     <>
       <div className="w-full m-0 p-0 font-serif box-border">
-        <div className="flex justify-center sm:justify-start mx-w-[100%] p-3 bg-slate-200">
+        <div className="flex justify-center  sm:justify-start mx-w-[100%] p-3 bg-slate-200">
           <div className="ms-5 text-slate-400 text-2xl">
             <MdLocalShipping />
           </div>
 
           <div className="info">
-            <p className="ms-3 text-slate-400">
+            <p className="ms-3 text-xs sm:text-lg mt-1  text-slate-400">
               Free Shipping When Shipping upto $1000
             </p>
           </div>
@@ -190,7 +190,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
                 </>
               ) : (
                 <>
-                  <div className="p-3 bg-white rounded-sm">
+                  <div className="p-3 ms-1  bg-white rounded-sm">
                     <BiUser className=" text-sm sm:text-lg" />
                   </div>
                   <div>
@@ -278,7 +278,7 @@ const Nav = ({ search, setSearch, searchProduct }) => {
           {/*navbar part end*/}
 
           <div>
-            <p className="text-slate-200 bg-red-500 p-2 sm:p-3 rounded-sm me-3 sm:me-5 font-semibold text-[10px] sm:text-sm ">
+            <p className="text-slate-200 bg-red-500 p-2 sm:p-3 rounded-sm me-2 sm:me-5 font-semibold text-[10px] sm:text-sm ">
               flat 10% over all iphone
             </p>
           </div>
